@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Growth Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js"></script>
+</head>
+
+<body class="container bg-dark">
+
+    <div class="calculation-form d-flex flex-column bg-light">
+        <h3>Growth Calculator</h3>
+        <p>
+            Use this calculator to determine the change in value of assets over a period of time.
+        </p>
+
+        <input id="start" class="form-control form-control-lg" type="number" placeholder="Starting value..." />
+        <input id="end" class="form-control form-control-lg" type="number" placeholder="End value..." />
+        <input id="period" class="form-control form-control-lg" type="number" placeholder="Period (31 days, 2 years, etc)" value="1" />
+        <button type="button" class="btn btn-lg btn-danger" onclick="calculate()">Calculate</button>
+        <div id="results" class="alert alert-dark hidden" role="alert" style="display: none;">
+            <table class="text-lg">
+                <tr>
+                    <td>Growth:</td>
+                    <td><strong id="growth-perc"></strong></td>
+                </tr>
+                <tr>
+                    <td>AAGR:</td>
+                    <td><strong id="avg-growth-perc"></strong></td>
+                </tr>
+                <tr>
+                    <td>CAGR:</td>
+                    <td><strong id="cmp-growth-perc"></strong></td>
+                </tr>
+            </table>
+        </div>       
+
+    </div>
+
+</body>
+
+</html>
